@@ -1,0 +1,83 @@
+[
+  {
+    "id": "user-admin-01",
+    "name": "Dr. Ramesh Sharma",
+    "email": "dean.academics@apextech.edu.in",
+    "password": "password123",
+    "role": "university_admin",
+    "designation": "Faculty",
+    "university_id": "univ-apex-01",
+    "department": "Academic Council & CSE",
+    "assigned_courses": []
+  },
+  {
+    "id": "user-faculty-01",
+    "name": "Prof. Ananya Sen",
+    "email": "ananya.sen@apextech.edu.in",
+    "password": "password123",
+    "role": "faculty",
+    "designation": "Faculty",
+    "university_id": "univ-apex-01",
+    "department": "Computer Science & Engineering",
+    "assigned_courses": []
+  },
+  {
+    "id": "user-student-01",
+    "name": "Priya Nair",
+    "email": "priya.nair@student.apextech.edu.in",
+    "password": "password123",
+    "role": "student",
+    "designation": "Faculty",
+    "university_id": "univ-apex-01",
+    "department": "Computer Science & Engineering",
+    "assigned_courses": []
+  },
+  {
+    "id": "user-pres-admin",
+    "name": "Dr. Ramesh Sharma",
+    "email": "dean.socse@presidencyuniversity.in",
+    "password": "admin123",
+    "role": "university_admin",
+    "designation": "Dean & Professor, School of CSE",
+    "university_id": "univ-presidency-01",
+    "department": "Academic Administration & CSE",
+    "assigned_courses": []
+  },
+  {
+    "id": "user-pres-hod",
+    "name": "Dr. Suresh Babu",
+    "email": "hod.cse@presidencyuniversity.in",
+    "password": "hod123",
+    "role": "hod",
+    "designation": "Professor & Head of Department",
+    "university_id": "univ-presidency-01",
+    "department": "Computer Science & Engineering",
+    "assigned_courses": []
+  },
+  {
+    "id": "user-pres-faculty-daa",
+    "name": "Prof. Rajesh Kumar",
+    "email": "faculty.daa@presidencyuniversity.in",
+    "password": "faculty123",
+    "role": "faculty",
+    "designation": "Associate Professor",
+    "university_id": "univ-presidency-01",
+    "department": "Computer Science & Engineering",
+    "assigned_courses": [
+      "CSE2007"
+    ]
+  },
+  {
+    "id": "user-pres-faculty-ds",
+    "name": "Dr. Meenakshi Sundaram",
+    "email": "faculty.ds@presidencyuniversity.in",
+    "password": "faculty123",
+    "role": "faculty",
+    "designation": "Assistant Professor",
+    "university_id": "univ-presidency-01",
+    "department": "Computer Science & Engineering",
+    "assigned_courses": [
+      "CSE2001"
+    ]
+  }
+]

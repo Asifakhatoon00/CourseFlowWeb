@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+venv/
+backend/venv/
+.venv/
+env/
+
+# Build outputs
+dist/
+frontend/dist/
+dist-ssr/
+
+# Python cache & bytecode
+__pycache__/
+backend/**/__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+
+# Environment & local configurations
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Ephemeral large PDF uploads
+backend/uploads/pdf-*.pdf

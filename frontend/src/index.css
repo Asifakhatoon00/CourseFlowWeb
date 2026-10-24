@@ -1,0 +1,513 @@
+/* AICTE CourseFlow AI - Official Academic & Council Professional Theme */
+:root {
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Official Academic Light & Prestigious Palette */
+  --bg-page: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-subtle: #f1f5f9;
+  --bg-surface-hover: #f8fafc;
+  
+  --border-subtle: #e2e8f0;
+  --border-medium: #cbd5e1;
+  --border-accent: #bfdbfe;
+  --border-active: #2563eb;
+
+  /* Typography */
+  --text-title: #0f172a;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --text-white: #ffffff;
+
+  /* Brand Accents - AICTE / Govt Blue & Saffron */
+  --aicte-navy-dark: #07192f;
+  --aicte-navy: #0f2744;
+  --aicte-blue: #1e40af;
+  --aicte-blue-light: #dbeafe;
+  --aicte-saffron: #d97706;
+  --aicte-saffron-light: #fef3c7;
+  --aicte-green: #059669;
+  --aicte-green-light: #d1fae5;
+  --aicte-purple: #7c3aed;
+  --aicte-purple-light: #ede9fe;
+  --aicte-rose: #e11d48;
+  --aicte-rose-light: #ffe4e6;
+
+  /* Category Badges (Clean Academic Tints) */
+  --badge-pcc-bg: #eff6ff;
+  --badge-pcc-text: #1d4ed8;
+  --badge-pcc-border: #bfdbfe;
+
+  --badge-bsc-bg: #f0fdf4;
+  --badge-bsc-text: #15803d;
+  --badge-bsc-border: #bbf7d0;
+
+  --badge-esc-bg: #fff7ed;
+  --badge-esc-text: #c2410c;
+  --badge-esc-border: #fed7aa;
+
+  --badge-pec-bg: #faf5ff;
+  --badge-pec-text: #7e22ce;
+  --badge-pec-border: #e9d5ff;
+
+  --badge-oec-bg: #fffbeb;
+  --badge-oec-text: #b45309;
+  --badge-oec-border: #fde68a;
+
+  --badge-hsmc-bg: #f5f3ff;
+  --badge-hsmc-text: #6d28d9;
+  --badge-hsmc-border: #ddd6fe;
+
+  --badge-proj-bg: #fdf2f8;
+  --badge-proj-text: #be185d;
+  --badge-proj-border: #fbcfe8;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  --shadow-card: 0 1px 3px rgba(15, 23, 42, 0.06), 0 4px 12px rgba(15, 23, 42, 0.04);
+  --shadow-elevated: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  --shadow-header: 0 2px 10px rgba(7, 25, 47, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-page);
+  color: var(--text-body);
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-surface-subtle);
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Official Government / AICTE Top Bar */
+.govt-banner-strip {
+  background: #07192f;
+  color: #94a3b8;
+  font-size: 0.72rem;
+  padding: 0.35rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.govt-banner-strip a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+/* Header & Navigation */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.brand-logo-badge {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, #0f2744 0%, #1e40af 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.brand-title {
+  font-size: 1.22rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-title);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.brand-pill {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.15rem 0.55rem;
+  background: var(--aicte-saffron-light);
+  color: var(--aicte-saffron);
+  border: 1px solid rgba(217, 119, 6, 0.3);
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.brand-subtitle {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+/* Role Switcher Pill */
+.role-switcher-container {
+  display: flex;
+  align-items: center;
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  padding: 0.25rem;
+  gap: 0.25rem;
+}
+
+.role-btn {
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.role-btn:hover {
+  color: var(--text-title);
+}
+
+.role-btn.active-role-admin {
+  background: #0f2744;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(15, 39, 68, 0.3);
+}
+
+.role-btn.active-role-faculty {
+  background: #7c3aed;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(124, 58, 237, 0.3);
+}
+
+.role-btn.active-role-student {
+  background: #059669;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(5, 150, 105, 0.3);
+}
+
+/* Navigation Tabs Strip */
+.nav-tab-strip {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #0f2744;
+  padding: 0.45rem 2rem;
+  overflow-x: auto;
+}
+
+.nav-tab-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-family: inherit;
+  font-size: 0.84rem;
+  font-weight: 600;
+  padding: 0.55rem 0.95rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-tab-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-tab-btn.active {
+  color: #ffffff;
+  background: #1e40af;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Professional White Surface Cards */
+.pro-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: all 0.25s ease;
+}
+
+.pro-card-interactive {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-card);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.pro-card-interactive:hover {
+  transform: translateY(-2px);
+  border-color: #93c5fd;
+  box-shadow: var(--shadow-elevated);
+}
+
+/* Category Badges */
+.badge-category {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  letter-spacing: 0.02em;
+}
+
+.cat-pcc, .cat-program-core { background: var(--badge-pcc-bg); color: var(--badge-pcc-text); border: 1px solid var(--badge-pcc-border); }
+.cat-bsc, .cat-school-core { background: var(--badge-bsc-bg); color: var(--badge-bsc-text); border: 1px solid var(--badge-bsc-border); }
+.cat-esc, .cat-engineering-science-cycle { background: var(--badge-esc-bg); color: var(--badge-esc-text); border: 1px solid var(--badge-esc-border); }
+.cat-pec, .cat-discipline-elective { background: var(--badge-pec-bg); color: var(--badge-pec-text); border: 1px solid var(--badge-pec-border); }
+.cat-oec, .cat-open-elective { background: var(--badge-oec-bg); color: var(--badge-oec-text); border: 1px solid var(--badge-oec-border); }
+.cat-hsmc { background: var(--badge-hsmc-bg); color: var(--badge-hsmc-text); border: 1px solid var(--badge-hsmc-border); }
+.cat-proj { background: var(--badge-proj-bg); color: var(--badge-proj-text); border: 1px solid var(--badge-proj-border); }
+
+/* Bloom Badges */
+.badge-bloom {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+}
+.bloom-Remember { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+.bloom-Understand { background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; }
+.bloom-Apply { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+.bloom-Analyze { background: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
+.bloom-Evaluate { background: #ffe4e6; color: #be123c; border: 1px solid #fecdd3; }
+.bloom-Create { background: #f3e8ff; color: #7e22ce; border: 1px solid #e9d5ff; }
+
+/* Buttons */
+.btn-primary {
+  background: #0f2744;
+  color: #ffffff;
+  border: 1px solid #0f2744;
+  border-radius: var(--radius-md);
+  padding: 0.6rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 6px rgba(15, 39, 68, 0.15);
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #1e40af;
+  border-color: #1e40af;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.25);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: var(--text-title);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 0.6rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-surface-subtle);
+  border-color: #94a3b8;
+}
+
+.btn-accent {
+  background: #d97706;
+  color: #ffffff;
+  font-weight: 700;
+  border: 1px solid #d97706;
+  border-radius: var(--radius-md);
+  padding: 0.6rem 1.25rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 6px rgba(217, 119, 6, 0.25);
+  transition: all 0.2s ease;
+}
+
+.btn-accent:hover {
+  background: #b45309;
+}
+
+/* Institutional Academic Table */
+.academic-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+}
+
+.academic-table th {
+  background: var(--bg-surface-subtle);
+  color: var(--text-title);
+  font-weight: 700;
+  text-align: left;
+  padding: 0.85rem 1rem;
+  border-bottom: 2px solid var(--border-subtle);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.academic-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-body);
+}
+
+.academic-table tr:hover td {
+  background: #f8fafc;
+}
+
+/* Dropzone */
+.dropzone {
+  border: 2px dashed #93c5fd;
+  background: #f0f7ff;
+  border-radius: var(--radius-xl);
+  padding: 2.75rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.dropzone:hover, .dropzone.drag-active {
+  border-color: #2563eb;
+  background: #e0f2fe;
+}
+
+/* Metric Cards */
+.metric-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  border-left: 4px solid var(--aicte-blue);
+}
+
+.metric-value {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--text-title);
+  letter-spacing: -0.02em;
+}
+
+.metric-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Layout */
+.page-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.grid-cols-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.grid-cols-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  gap: 1.5rem;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+  }
+  .page-container {
+    padding: 1rem;
+  }
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+}
